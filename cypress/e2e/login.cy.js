@@ -1,7 +1,10 @@
+beforeEach(() => {
+  //Arrange
+  cy.visit("http://localhost:4000");
+});
+
 describe("login", () => {
   it("Login with valid credentials should allow access to the system", () => {
-    //Arrange
-    cy.visit("http://localhost:4000");
     //Act
     cy.get("#username").click().type("andreia.ribeiro");
     cy.get("#senha").click().type("1234567");
@@ -10,8 +13,6 @@ describe("login", () => {
     cy.contains("h4", "Make a Transfer").should("be.visible");
   });
   it("Login with invalid credentials should show error message", () => {
-    //Arrange
-    cy.visit("http://localhost:4000");
     //Act
     cy.get("#username").click().type("andreia.ribeiro");
     cy.get("#senha").click().type("7654321"); //incorrect password
