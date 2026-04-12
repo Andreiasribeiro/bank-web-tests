@@ -1,6 +1,7 @@
 beforeEach(() => {
   //Arrange
   cy.visit("http://localhost:4000");
+  cy.screenshot("after-visiting-page");
 });
 
 describe("login", () => {
@@ -8,7 +9,9 @@ describe("login", () => {
     //Act
     cy.get("#username").click().type("andreia.ribeiro");
     cy.get("#senha").click().type("1234567");
+    cy.screenshot("after-entered-valid-data");
     cy.get("#login-section > .btn").click();
+    cy.screenshot("after-clicking-login-button");
     //Assert
     cy.contains("h4", "Make a Transfer").should("be.visible");
   });
