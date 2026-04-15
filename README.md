@@ -7,7 +7,7 @@ This project automates end-to-end testing for the bank web application from Juli
 ## Prerequisites
 
 - Node.js (version 14 or higher recommended)
-- The bank API must be running: [banco-api](https://github.com/juliodelimas/banco-apiRegras) (translated to English for these tests)
+- The bank API must be running: [banco-api](https://github.com/juliodelimas/banco-api) (translated to English for these tests)
 - The bank web application must be running: [banco-web](https://github.com/juliodelimas/banco-web) (translated to English for these tests)
 - Both services should be accessible at `http://localhost:4000`
 - **Note:** Some parts of Julio de Lima's original projects have been translated to English for these tests.
